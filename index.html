@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle Financeiro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<header class="header">
+  <h1>🐱 Controle Financeiro</h1>
+</header>
+
+<main class="layout">
+
+  <!-- COLUNA ESQUERDA -->
+  <div class="coluna">
+
+    <section class="card">
+      <h2>💰 Entradas</h2>
+      <input type="number" placeholder="Salário" id="salario">
+      <input type="number" placeholder="Vale alimentação" id="vale">
+      <small>Vale não entra no saldo</small>
+    </section>
+
+    <section class="card">
+      <h2>💸 Despesas</h2>
+      <input type="number" placeholder="Aluguel" id="aluguel">
+      <input type="number" placeholder="Condomínio" id="condominio">
+      <input type="number" placeholder="Internet" id="internet">
+      <input type="number" placeholder="Luz" id="luz">
+      <input type="number" placeholder="Nubank" id="nubank">
+      <input type="number" placeholder="Magalu" id="magalu">
+    </section>
+
+    <section class="card">
+      <h2>📦 Extras</h2>
+      <div id="extras"></div>
+      <button onclick="addExtra()">+ Adicionar</button>
+    </section>
+
+  </div>
+
+  <!-- COLUNA DIREITA -->
+  <div class="coluna">
+
+    <section class="card destaque">
+      <h2>📊 Resultado</h2>
+
+      <div class="resultado-grid">
+
+        <!-- RESUMO -->
+        <div class="resumo">
+          <div class="linha">
+            <span>Despesas</span>
+            <strong id="despesas">R$ 0</strong>
+          </div>
+
+          <div class="linha">
+            <span>Salário</span>
+            <strong id="receitas">R$ 0</strong>
+          </div>
+
+          <div class="linha">
+            <span>Vale</span>
+            <strong id="valeInfo">R$ 0</strong>
+          </div>
+
+          <div class="linha saldo">
+            <span>Saldo</span>
+            <strong id="saldo">R$ 0</strong>
+          </div>
+        </div>
+
+        <!-- GRÁFICO -->
+        <div class="grafico-box">
+          <canvas id="grafico"></canvas>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

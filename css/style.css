@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: url("https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg") center/cover;
+  color: #f3e8ff;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 0, 20, 0.9);
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 🔥 LAYOUT PRINCIPAL */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COLUNAS */
+.coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(20, 0, 40, 0.95);
+  border: 1px solid #9333ea;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f0f1a;
+  color: white;
+}
+
+/* BOTÃO */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #9333ea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+/* RESULTADO GRID */
+.resultado-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* RESPONSIVO RESULTADO */
+@media (max-width: 600px) {
+  .resultado-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESUMO */
+.resumo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* SALDO */
+.saldo strong {
+  font-size: 20px;
+}
+
+/* GRÁFICO */
+.grafico-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DESTAQUE */
+.destaque {
+  border: 2px solid #c084fc;
+}
